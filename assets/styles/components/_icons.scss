@@ -1,0 +1,9 @@
+@use "../abstracts/colors" as color;
+
+#annonces {
+    [data-ref="#icon_search"],
+    [data-ref="#icon_location"] {
+        height: 40px;
+        use { fill: color.$accent2; }
+    }
+}

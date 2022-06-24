@@ -1,0 +1,68 @@
+@use "../abstracts/spaces" as space;
+@use "../abstracts/colors" as color;
+@use "../base/fonts" as font;
+@use "../base/global";
+
+footer {
+    padding: max(100px, 5.555rem) global.$site_width;
+    background-color: color.$neutral800;
+    color: color.$neutral100;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: space.$md 100px;
+
+    div {
+        flex-basis: 300px;
+    }
+
+    img {
+        height: 41px;
+        margin-bottom: space.$sm;
+    }
+
+    nav {
+        display: grid;
+        gap: space.$md;
+        flex-grow: 1;
+
+        @media screen and (min-width: 600px) {
+            grid-auto-flow: column;
+        }
+    }
+
+    section p, form label {
+        font-family: font.$ff_hdg;
+        color: color.$accent3;
+    }
+
+    a {
+        display: block;
+        font-family: font.$ff_std !important;
+        font-size: font.$fs_nm !important;
+        width: fit-content;
+    }
+    :where(a, p) ~ a {
+        margin-top: space.$xs;
+    }
+
+    form {
+        > * {
+            display: block;
+        }
+
+        input#newsletter{
+            box-sizing: border-box;
+            min-width: 300px;
+            padding: space.$xs;
+            margin-top: space.$xs;
+            color: color.$neutral800;
+            background-color: color.$neutral100;
+        }
+
+        .cta {
+            margin-top: space.$sm;
+        }
+    }
+}

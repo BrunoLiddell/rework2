@@ -1,0 +1,52 @@
+@use "../abstracts/colors" as color;
+@use "../abstracts/spaces" as space;
+
+// HEADER VISITEURS
+
+#global_container > header#visiteurs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-block-start: 60px;
+
+    &.candidats  { background-color: color.$neutral200; }
+    &.recruteurs { background-color: color.$neutral800; color: color.$neutral000; }
+
+    #logo {
+        img {
+            height: 41px;
+        }
+    }
+
+    nav:first-of-type {
+        margin-left: 60px;
+    }
+    nav:last-of-type {
+        margin-left: auto;
+    }
+    a:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    @media screen and (max-width: 1399px) {
+        gap: space.$sm space.$md;
+
+        nav:first-of-type {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 978px) {
+        justify-content: center;
+
+        nav:last-of-type {
+            margin-inline: auto;
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 615px) {
+        a:not(:last-child) {
+            margin: 0 auto space.$xs;
+            display: block;
+        }
+    }
+}

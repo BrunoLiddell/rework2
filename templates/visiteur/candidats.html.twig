@@ -1,0 +1,297 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+<header id="visiteurs" class="candidats container">
+    <div id="logo">
+        <a href="{{ path('accueil_candidats') }}" aria-label="Retour à l'accueil">
+            <img src="{{ asset('assets/Logo_2-Light.svg') }}" alt="Logo Re:Work" aria-hidden="true">
+        </a>
+    </div>
+
+    <nav aria-label="Sommaire de la page">
+        <a href="#annonces">Annonces</a>
+        <a href="#temoignages">Témoignages</a>
+    </nav>
+    <nav aria-label="Navigation visiteur">
+        <a href="{{ path('accueil_recruteurs') }}" class="cta bleu">Je suis recruteur</a>
+        <a href="#" class="cta blanc">Accèder à mon profil</a>
+    </nav>
+</header>
+{% endblock %}
+
+{% block main %}
+<main id="home" class="candidats">
+    <header class="container">
+        <div class="text">
+            <h1>Vous valez plus <span class="cesure">que votre CV&nbsp;!</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum optio, fugit pariatur culpa maiores ducimus nemo unde impedit autem accusantium!</p>
+            <a href="#" class="cta bleu">S'inscrire</a>
+        </div>
+        <div class="mosaic" aria-hidden="true">
+            <img src="{{ asset('images/mosaic_1.svg') }}">
+        </div>
+    </header>
+
+    <section id="annonces" aria-labelledby="titre_annonces">
+        <div class="container">
+            <div>
+                <h2 id="titre_annonces">Des annonces <span class="cesure">qui vous correspondent</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex at illo, quo facilis fuga. Vitae ad ipsum voluptas quibusdam!</p>
+            </div>
+            
+            <!--
+            <form>
+                <label for="recherche_poste">
+                    <svg><use href="#icon_search"></svg>
+                </label>
+                <input type="search" name="recherche_poste" placeholder="Poste recherché">
+    
+                <label for="recherche_lieu">
+                    <svg><use href="#icon_location"></svg>
+                </label>
+                <input type="search" name="recherche_lieu" placeholder="Lieu">
+            </form>
+            -->
+        </div>
+
+        <ul>
+            <li>
+                <img src="{{ asset('images/logo_smartcat.png') }}" alt="Logo Smartcat" aria-hidden="true">
+                <h3>Product Owner</h3>
+                <p>SmartCat – Nemours (77)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat&nbsp;: CDI</p>
+                <a href="#" class="cta rouge">Voir l'offre</a>
+            </li>
+            <li>
+                <img src="{{ asset('images/logo_leets.png') }}" alt="Logo Leets" aria-hidden="true">
+                <h3>Web Designer Senior</h3>
+                <p>Leets – Paris (75)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat&nbsp;: CDI</p>
+                <a href="#" class="cta bleu">Voir l'offre</a>
+            </li>
+            <li>
+                <img src="{{ asset('images/logo_beemymate.png') }}" alt="Logo Beemymate" aria-hidden="true">
+                <h3>Business Consultant</h3>
+                <p>Beemymate – La Défense (62)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Freelance</p>
+                <a href="#" class="cta blanc">Voir l'offre</a>
+            </li>
+            <li>
+                <img src="{{ asset('images/logo_sapiens.png') }}" alt="Logo Sapiens" aria-hidden="true">
+                <h3>Designer UX / UI</h3>
+                <p>Sapiens – Paris (75)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat : Alternance</p>
+                <a href="#" class="cta orange">Voir l'offre</a>
+            </li>
+            <li>
+                <img src="{{ asset('images/logo_novopilota.png') }}" alt="Logo Novopilota" aria-hidden="true">
+                <h3>Chargé·e de projets</h3>
+                <p>Novopilota – Lyon (69)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat : CDI</p>
+                <a href="#" class="cta rouge">Voir l'offre</a>
+            </li>
+            <li>
+                <img src="{{ asset('images/logo_pepeat.png') }}" alt="Logo Pepeat" aria-hidden="true">
+                <h3>Consultant avant-vente</h3>
+                <p>Pepeat – Bordeaux (33)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Freelance</p>
+                <a href="#" class="cta bleu">Voir l'offre</a>
+            </li>
+            <li>
+                <img src="{{ asset('images/logo_okike.png') }}" alt="Logo Okiké" aria-hidden="true">
+                <h3>Scrum Master</h3>
+                <p>Okiké – Aix-en-Provence (13)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat : CDI</p>
+                <a href="#" class="cta blanc">Voir l'offre</a>
+            </li>
+            <li>
+                <img src="{{ asset('images/logo_plantz.png') }}" alt="Logo Plantz" aria-hidden="true">
+                <h3>Designer UX / UI</h3>
+                <p>Plantz – Nantes (44)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat : CDD</p>
+                <a href="#" class="cta orange">Voir l'offre</a>
+            </li>
+
+            <li aria-hidden="true">
+                <img src="{{ asset('images/logo_smartcat.png') }}" alt="Logo Smartcat" aria-hidden="true">
+                <h3>Product Owner</h3>
+                <p>SmartCat – Nemours (77)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat&nbsp;: CDI</p>
+                <a href="#" class="cta rouge">Voir l'offre</a>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/logo_leets.png') }}" alt="Logo Leets" aria-hidden="true">
+                <h3>Web Designer Senior</h3>
+                <p>Leets – Paris (75)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat&nbsp;: CDI</p>
+                <a href="#" class="cta bleu">Voir l'offre</a>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/logo_beemymate.png') }}" alt="Logo Beemymate" aria-hidden="true">
+                <h3>Business Consultant</h3>
+                <p>Beemymate – La Défense (62)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Freelance</p>
+                <a href="#" class="cta blanc">Voir l'offre</a>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/logo_sapiens.png') }}" alt="Logo Sapiens" aria-hidden="true">
+                <h3>Designer UX / UI</h3>
+                <p>Sapiens – Paris (75)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat : Alternance</p>
+                <a href="#" class="cta orange">Voir l'offre</a>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/logo_novopilota.png') }}" alt="Logo Novopilota" aria-hidden="true">
+                <h3>Chargé·e de projets</h3>
+                <p>Novopilota – Lyon (69)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat : CDI</p>
+                <a href="#" class="cta rouge">Voir l'offre</a>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/logo_pepeat.png') }}" alt="Logo Pepeat" aria-hidden="true">
+                <h3>Consultant avant-vente</h3>
+                <p>Pepeat – Bordeaux (33)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Freelance</p>
+                <a href="#" class="cta bleu">Voir l'offre</a>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/logo_okike.png') }}" alt="Logo Okiké" aria-hidden="true">
+                <h3>Scrum Master</h3>
+                <p>Okiké – Aix-en-Provence (13)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat : CDI</p>
+                <a href="#" class="cta blanc">Voir l'offre</a>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/logo_plantz.png') }}" alt="Logo Plantz" aria-hidden="true">
+                <h3>Designer UX / UI</h3>
+                <p>Plantz – Nantes (44)</p>
+                <p>Quos magnam recusandae suscipit fugit, commodi omnis eaque harum saepe.</p>
+                <p>Contrat : CDD</p>
+                <a href="#" class="cta orange">Voir l'offre</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="test_mbti" aria-labelledby="titre_mbti" class="container">
+        <div>
+            <h2 id="titre_mbti">Votre personnalité <span class="cesure">au centre du&nbsp;recrutement</span></h2>
+            <p>Vos compétences ne sont pas vos seuls atouts&nbsp;! Les offres postées sur Re:Work incluent un score individuel capable de vous indiquer si votre personnalité est faite non seulement pour le poste, mais aussi pour l’entreprise a laquelle vous postulez.</p>
+            <p>Comment&nbsp;? Grâce au test MBTI&nbsp;! Ce test de personnalité, reconnu dans les milieux professionnels, permets de mieux cerner qui vous êtes et ansi mettre vos atouts en valeur.</p>
+            <a href="https://www.16personalities.com/fr" target="_blank" class="cta bleu">Faire le test MBTI</a>
+        </div>
+    </section>
+
+    <section id="etapes" aria-labelledby="titre_etapes" class="container">
+        <h2 id="titre_etapes">Trois étapes <span class="cesure">pour réussir</span></h2>
+        <ol>
+            <li>Recherchez des profils de recruteurs sur la base de vos centres d’intérêt ou des traits de personnalité que vous souhaitez côtoyer au quotidien&nbsp;!</li>
+            <li>Matchez avec vos recruteurs choisis et échangez quelques messages pour apprendre à vous connaître. Pourquoi ne pas organiser une rencontre&nbsp;?</li>
+            <li>Maintenant que vous vous connaissez un peu mieux, et que vous avez pu échanger de vos aspirations et envies, il est temps de rentrer dans le vif du sujet.</li>
+        </ol>
+    </section>
+
+    <section id="temoignages" aria-labelledby="titre_temoignages" class="container">
+        <h2 id="titre_temoignages">Ce qu'en disent <span class="cesure">nos utilisateurs</span></h2>
+
+        <figure>
+            <img src="{{ asset('images/WahidAri.png') }}" alt="Photo de Wahid Ari" aria-hidden="true">
+            <figcaption>
+                <p>Wahid Ari</p>
+                <p>Informaticien</p>
+            </figcaption>
+            <blockquote>Un excellent suivi de la part de l'équipe, j'ai pu retrouver un emploi en l'espace de seulement deux mois&nbsp;!</blockquote>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/MeganeLefevre.png') }}" alt="Photo de Mégane Lefèvre" aria-hidden="true">
+            <figcaption>
+                <p>Mégane Lefèvre</p>
+                <p>Directrice Artistique</p>
+            </figcaption>
+            <blockquote>Une plateforme bien pensée pour les candidatures&nbsp;! Les entreprises sont très bienveillantes quant aux reconversions.</blockquote>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/LinePottier.png') }}" alt="Photo de Wahid Ari" aria-hidden="true">
+            <figcaption>
+                <p>Line Pottier</p>
+                <p>Rédactrice Web</p>
+            </figcaption>
+            <blockquote>Une procédure de recrutement vraiment efficace et des contacts avec des entreprises très rapides, je recommande.</blockquote>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/WahidAri.png') }}" alt="Photo de Wahid Ari" aria-hidden="true">
+            <figcaption>
+                <p>Wahid Ari</p>
+                <p>Informaticien</p>
+            </figcaption>
+            <blockquote>Un excellent suivi de la part de l'équipe, j'ai pu retrouver un emploi en l'espace de seulement deux mois&nbsp;!</blockquote>
+        </figure>
+    </section>
+</main>
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <div>
+        <img src="{{ asset('assets/Logo_2-Dark.svg') }}" alt="Logo Re:Work" aria-hidden="true">
+        <p>Qui reiciendis deleniti inventore ipsam blanditiis sapiente, minima porro vero lorem.</p>
+    </div>
+    <nav>
+        <section>
+            <a href="{{ path('accueil_candidats') }}">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+            <a href="#">FAQ</a>
+        </section>
+        <section>
+            <p>Recruteurs</p>
+            <a href="#">Espace offres</a>
+            <a href="#">Tarifs recruteurs</a>
+        </section>
+        <section>
+            <p>Candidats</p>
+            <a href="#">Espace personnel</a>
+            <a href="#">Voir les offres</a>
+        </section>
+    </nav>
+    <form>
+        <label for="newsletter">Newsletter</label>
+        <input type="email" name="newsletter" id="newsletter" placeholder="Votre adresse email">
+        <input type="submit" value="S'inscrire" class="cta rouge">
+    </form>
+</footer>
+{% endblock %}
+
+{% block postload_js %}
+    <script>
+        let nav       = document.querySelector('header#visiteurs');
+        let header    = document.querySelector('#home header');
+        let navHeight = nav.offsetHeight;
+
+        function setHeaderHeight(){
+            header.style.minHeight = 'calc(100vh - ' + navHeight + 'px)';
+        }
+
+        setHeaderHeight();
+
+        window.addEventListener('resize', setHeaderHeight);
+    </script>
+{% endblock %}

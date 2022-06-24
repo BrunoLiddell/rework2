@@ -1,0 +1,71 @@
+@use "../abstracts/colors" as color;
+
+// INTEGRATION DES POLICES
+
+// Gangitem
+@font-face {
+    font-family: 'Gangitem';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../../public/fonts/Gangitem.eot'); /* IE9 Compat Modes */
+    src: url('../../../public/fonts/Gangitem.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../../public/fonts/Gangitem.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../../../public/fonts/Gangitem.woff') format('woff'), /* Modern Browsers */
+         url('../../../public/fonts/Gangitem.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../../../public/fonts/Gangitem.svg') format('svg'); /* Legacy iOS */
+}
+
+// Kaisei Opti
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;700&display=swap');
+
+// Lato
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+// VARIABLES
+
+// Police
+$ff_hd1: 'Gangitem', 'Times New Roman', serif;
+$ff_hd2: 'Kaisei Opti', 'Times New Roman', serif;
+$ff_std: 'Lato', Tahoma, sans-serif;
+
+// Tailles
+$fs_nm: 16px;
+$fs_md: 24px;
+$fs_lg: 36px;
+
+
+// DÉCLARATIONS
+
+:root, %font_std {
+    font-family: $ff_std;
+    font-size: $fs_nm;
+    font-weight: 300;
+    line-height: 1.5;
+    color: color.$neutral300;
+}
+
+h1 {
+    font-family: $ff_hd1;
+    font-size: $fs_lg;
+    line-height: 1.1;
+}
+
+h2 {
+    font-family: $ff_hd2;
+    font-size: $fs_md;
+    line-height: 1.1;
+}
+
+ul {
+    li {
+        margin-bottom: 20px;
+    }
+
+    li::before {
+        content: "\2022";
+        color: color.$accent1;
+    }
+}
+
+b { font-weight: bold; }

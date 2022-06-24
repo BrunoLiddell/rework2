@@ -1,0 +1,57 @@
+@use "../abstracts/colors" as color;
+
+// VARIABLES
+
+// Police
+$ff_hdg: 'Krona One', 'Verdana', sans-serif;
+$ff_std: 'Raleway', Tahoma, sans-serif;
+
+// Tailles
+$fs_sm: 14px;
+$fs_nm: 18px;
+$fs_md: 24px;
+$fs_lg: 32px;
+$fs_xl: 38px;
+
+
+// DÉCLARATIONS
+
+:root, %font_std {
+    font-family: $ff_std;
+    font-size: $fs_nm;
+    font-weight: 500;
+    line-height: 1.5;
+    color: color.$neutral800;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $ff_hdg;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+h1 { font-size: $fs_xl; }
+h2 { font-size: $fs_lg; }
+h3 { font-size: $fs_md; }
+
+b { font-weight: bold; }
+
+a:not(.cta) {
+    font-family: $ff_hdg;
+    font-size: $fs_sm;
+    text-underline-offset: 1px;
+}
+
+// Styles de paragraphe
+
+:where(h1, h2, h3, h4, h5, h6) ~ p {
+    margin-top: 30px;
+}
+
+p ~ * {
+    margin-top: 30px;
+}
+
+span.cesure {
+    display: inline-block;
+}

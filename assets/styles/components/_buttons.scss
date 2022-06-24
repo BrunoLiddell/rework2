@@ -1,0 +1,44 @@
+@use "../abstracts/colors" as color;
+@use "../base/fonts" as font;
+
+%button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: font.$ff_hdg;
+    font-size: font.$fs_sm;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.cta {
+    @extend %button;
+
+    background-color: var(--bkg_color);
+    color: var(--txt_color);
+    width: fit-content;
+
+    &.bleu {
+        --bkg_color: #{color.$neutral800};
+        --txt_color: #{color.$accent3};
+    }
+    &.rouge {
+        --bkg_color: #{color.$accent1};
+        --txt_color: #{color.$neutral100};
+    }
+    &.orange {
+        --bkg_color: #{color.$accent2};
+        --txt_color: #{color.$neutral000};
+    }
+    &.jaune {
+        --bkg_color: #{color.$accent3};
+        --txt_color: #{color.$neutral800};
+    }
+    &.creme {
+        --bkg_color: #{color.$neutral200};
+        --txt_color: #{color.$neutral800};
+    }
+    &.blanc {
+        --bkg_color: #{color.$neutral100};
+        --txt_color: #{color.$neutral800};
+    }
+}

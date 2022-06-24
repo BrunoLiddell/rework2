@@ -1,0 +1,18 @@
+{% block header %}
+    <header id="candidats">
+        <div id="logo">
+            <a href="{{ path('accueil_candidats') }}" aria-label="Retour à l'accueil">
+                <img src="{{ asset('assets/Logo_2-Dark.svg') }}" alt="Logo Re:Work" aria-hidden="true">
+            </a>
+        </div>
+
+        <nav aria-label="Sommaire de la page">
+            <a href="#">Annonces</a>
+            <a href="#">Témoignages</a>
+        </nav>
+        <nav aria-label="Navigation visiteur">
+            <a href="{{ path('accueil_recruteurs') }}" class="cta bleu">Je suis recruteur</a>
+            <a href="#" class="cta blanc">Accèder à mon profil</a>
+        </nav>
+    </header>
+{% endblock %}

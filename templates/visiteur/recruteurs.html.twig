@@ -1,0 +1,266 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+<header id="visiteurs" class="recruteurs container">
+    <div id="logo">
+        <a href="{{ path('accueil_recruteurs') }}" aria-label="Retour à l'accueil">
+            <img src="{{ asset('assets/Logo_2-Dark.svg') }}" alt="Logo Re:Work" aria-hidden="true">
+        </a>
+    </div>
+
+    <nav aria-label="Sommaire de la page">
+        <a href="#annonces">Nos profils</a>
+        <a href="#temoignages">Témoignages</a>
+    </nav>
+    <nav aria-label="Navigation visiteur">
+        <a href="{{ path('accueil_candidats') }}" class="cta rouge">Je suis candidat</a>
+        <a href="#" class="cta blanc">Accèder à mon profil</a>
+    </nav>
+</header>
+{% endblock %}
+
+{% block main %}
+<main id="home" class="recruteurs">
+    <header class="container">
+        <div class="mosaic" aria-hidden="true">
+            <img src="{{ asset('images/mosaic_2.svg') }}">
+        </div>
+        <div class="text">
+            <h1>Le recrutement <span class="cesure">remonté à bloc</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum optio, fugit pariatur culpa maiores ducimus nemo unde impedit autem accusantium!</p>
+            <a href="#" class="cta rouge">S'inscrire</a>
+        </div>
+    </header>
+
+    <section id="profils" aria-labelledby="titre_profils">
+        <div class="container">
+            <div>
+                <h2 id="titre_profils">Des profils variés <span class="cesure">qui n’attendent que vous</span></span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex at illo, quo facilis fuga. Vitae ad ipsum voluptas quibusdam!</p>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <img src="{{ asset('images/photo_sophie.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Sophie</h3>
+                <p>ENFP-T</p>
+                <p>Chef de projet</p>
+                <p>0-5 ans d'expérience</p>
+            </li>
+            <li>
+                <img src="{{ asset('images/photo_jean-luc.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Jean-Luc</h3>
+                <p>ENTJ-T</p>
+                <p>Business Consultant</p>
+                <p>+ de 10  ans d'expérience</p>
+            </li>
+            <li>
+                <img src="{{ asset('images/photo_marguerite.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Marguerite</h3>
+                <p>ENTP-A</p>
+                <p>Product Owner</p>
+                <p>+ de 10  ans d'expérience</p>
+            </li>
+            <li>
+                <img src="{{ asset('images/photo_philippe.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Philippe</h3>
+                <p>INFJ-A</p>
+                <p>Data Analyst</p>
+                <p>0-5 ans d'expérience</p>
+            </li>
+            <li>
+                <img src="{{ asset('images/photo_robert.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Robert</h3>
+                <p>ESTJ-T</p>
+                <p>Business Analyst</p>
+                <p>+ de 10  ans d'expérience</p>
+            </li>
+            <li>
+                <img src="{{ asset('images/photo_bruno.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Bruno</h3>
+                <p>ISTP-T</p>
+                <p>Ingénieur Informatique</p>
+                <p>+ de 10  ans d'expérience</p>
+            </li>
+            <li>
+                <img src="{{ asset('images/photo_catherine.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Catherine</h3>
+                <p>ESFP-A</p>
+                <p>Directrice Marketing</p>
+                <p>5-10 ans d'expérience</p>
+            </li>
+            <li>
+                <img src="{{ asset('images/photo_laurence.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Laurence</h3>
+                <p>INFP-T</p>
+                <p>Chef de projet</p>
+                <p>0-5 ans d'expérience</p>
+            </li>
+            
+            <li aria-hidden="true">
+                <img src="{{ asset('images/photo_sophie.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Sophie</h3>
+                <p>ENFP-T</p>
+                <p>Chef de projet</p>
+                <p>0-5 ans d'expérience</p>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/photo_jean-luc.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Jean-Luc</h3>
+                <p>ENTJ-T</p>
+                <p>Business Consultant</p>
+                <p>+ de 10  ans d'expérience</p>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/photo_marguerite.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Marguerite</h3>
+                <p>ENTP-A</p>
+                <p>Product Owner</p>
+                <p>+ de 10  ans d'expérience</p>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/photo_philippe.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Philippe</h3>
+                <p>INFJ-A</p>
+                <p>Data Analyst</p>
+                <p>0-5 ans d'expérience</p>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/photo_robert.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Robert</h3>
+                <p>ESTJ-T</p>
+                <p>Business Analyst</p>
+                <p>+ de 10  ans d'expérience</p>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/photo_bruno.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Bruno</h3>
+                <p>ISTP-T</p>
+                <p>Ingénieur Informatique</p>
+                <p>+ de 10  ans d'expérience</p>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/photo_catherine.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Catherine</h3>
+                <p>ESFP-A</p>
+                <p>Directrice Marketing</p>
+                <p>5-10 ans d'expérience</p>
+            </li>
+            <li aria-hidden="true">
+                <img src="{{ asset('images/photo_laurence.png') }}" alt="Photo de candidat" aria-hidden="true">
+                <h3>Laurence</h3>
+                <p>INFP-T</p>
+                <p>Chef de projet</p>
+                <p>0-5 ans d'expérience</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="nouveaute" aria-labelledby="titre_nouveaute" class="container">
+        <div>
+            <h2 id="titre_nouveaute">Une nouvelle approche <span class="cesure">pour la création de vos offres</span></h2>
+            <p>Créez vos annonces simplement et rapidement grâce à une approche plus intuitive&nbsp;: sélectionnez quelques filtres, tapez l’intitulé du poste et laissez notre algorithme se charger du reste.</p>
+            <p>Allez plus loin en répondant à quelques questions qui permettront d’affiner les types de personnalité que vous recherchez pour le poste que vous proposez.</p>
+        </div>
+    </section>
+
+    <section id="etapes" aria-labelledby="titre_etapes" class="container">
+        <h2 id="titre_etapes">Trois étapes <span class="cesure">pour réussir</span></h2>
+        <ol>
+            <li>Recherchez des profils de recruteurs sur la base de vos centres d’intérêt ou des traits de personnalité que vous souhaitez côtoyer au quotidien&nbsp;!</li>
+            <li>Matchez avec vos recruteurs choisis et échangez quelques messages pour apprendre à vous connaître. Pourquoi ne pas organiser une rencontre&nbsp;?</li>
+            <li>Maintenant que vous vous connaissez un peu mieux, et que vous avez pu échanger de vos aspirations et envies, il est temps de rentrer dans le vif du sujet.</li>
+        </ol>
+    </section>
+
+    <section id="temoignages" aria-labelledby="titre_temoignages" class="container">
+        <h2 id="titre_temoignages">Ce qu'en disent <span class="cesure">nos utilisateurs</span></h2>
+
+        <figure>
+            <img src="{{ asset('images/WahidAri.png') }}" alt="Photo de Wahid Ari" aria-hidden="true">
+            <figcaption>
+                <p>Wahid Ari</p>
+                <p>Informaticien</p>
+            </figcaption>
+            <blockquote>Un excellent suivi de la part de l'équipe, j'ai pu retrouver un emploi en l'espace de seulement deux mois&nbsp;!</blockquote>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/MeganeLefevre.png') }}" alt="Photo de Mégane Lefèvre" aria-hidden="true">
+            <figcaption>
+                <p>Mégane Lefèvre</p>
+                <p>Directrice Artistique</p>
+            </figcaption>
+            <blockquote>Une plateforme bien pensée pour les candidatures&nbsp;! Les entreprises sont très bienveillantes quant aux reconversions.</blockquote>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/LinePottier.png') }}" alt="Photo de Wahid Ari" aria-hidden="true">
+            <figcaption>
+                <p>Line Pottier</p>
+                <p>Rédactrice Web</p>
+            </figcaption>
+            <blockquote>Une procédure de recrutement vraiment efficace et des contacts avec des entreprises très rapides, je recommande.</blockquote>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/WahidAri.png') }}" alt="Photo de Wahid Ari" aria-hidden="true">
+            <figcaption>
+                <p>Wahid Ari</p>
+                <p>Informaticien</p>
+            </figcaption>
+            <blockquote>Un excellent suivi de la part de l'équipe, j'ai pu retrouver un emploi en l'espace de seulement deux mois&nbsp;!</blockquote>
+        </figure>
+    </section>
+</main>
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <div>
+        <img src="{{ asset('assets/Logo_2-Dark.svg') }}" alt="Logo Re:Work" aria-hidden="true">
+        <p>Qui reiciendis deleniti inventore ipsam blanditiis sapiente, minima porro vero lorem.</p>
+    </div>
+    <nav>
+        <section>
+            <a href="{{ path('accueil_candidats') }}">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+            <a href="#">FAQ</a>
+        </section>
+        <section>
+            <p>Recruteurs</p>
+            <a href="#">Espace offres</a>
+            <a href="#">Tarifs recruteurs</a>
+        </section>
+        <section>
+            <p>Candidats</p>
+            <a href="#">Espace personnel</a>
+            <a href="#">Voir les offres</a>
+        </section>
+    </nav>
+    <form>
+        <label for="newsletter">Newsletter</label>
+        <input type="email" name="newsletter" id="newsletter" placeholder="Votre adresse email">
+        <input type="submit" value="S'inscrire" class="cta rouge">
+    </form>
+</footer>
+{% endblock %}
+
+{% block postload_js %}
+    <script>
+        let nav       = document.querySelector('header#visiteurs');
+        let header    = document.querySelector('#home header');
+        let navHeight = nav.offsetHeight;
+
+        function setHeaderHeight(){
+            header.style.minHeight = 'calc(100vh - ' + navHeight + 'px)';
+        }
+
+        setHeaderHeight();
+
+        window.addEventListener('resize', setHeaderHeight);
+    </script>
+{% endblock %}
